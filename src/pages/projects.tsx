@@ -4,17 +4,19 @@ import { Link } from 'gatsby'
 import Page from '../components/Page'
 import Container from '../components/Container'
 import IndexLayout from '../layouts'
+import Code from '../components/code'
 
-const PageTwo = () => (
+const Projects = () => (
   <IndexLayout>
-    <Page>
+    <Page title="projects.ts">
       <Container>
-        <h1>Hi from the second page</h1>
-        <p>Welcome to page 2</p>
+        <h1>Projects</h1>
+
+        <Code alias="jsSkills" packageName="@thk/js" />
+        <Code alias="cssSkils" packageName="@thk/css" />
+        <Code alias="htmlSkills" packageName="@thk/html" />
+
         <ul>
-          <li>
-            <Link to="/a-markdown-page/">Show me some Markdown!</Link>
-          </li>
           <li>
             <Link to="/">Take me back home.</Link>
           </li>
@@ -24,4 +26,4 @@ const PageTwo = () => (
   </IndexLayout>
 )
 
-export default PageTwo
+export default Projects

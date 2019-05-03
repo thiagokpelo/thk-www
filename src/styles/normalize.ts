@@ -1,5 +1,6 @@
 import { dimensions, fonts, colors, breakpoints } from './variables'
-import { getEmSize } from './mixins'
+import { getRemSize } from './mixins'
+import { mediaQuerie } from '@thk/helpers'
 
 export default `
   html {
@@ -10,31 +11,43 @@ export default `
   *::before,
   *::after {
     box-sizing: inherit;
+
   }
 
   html {
-    font-size: ${dimensions.fontSize.regular}px !important;
-    line-height: ${dimensions.lineHeight.regular} !important;
+    font-size: ${dimensions.fontSize.base}px;
+  }
+
+  ::selection {
+    background: ${colors.pink};
   }
 
   body {
-    width: 100%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    font-family: ${fonts.sansSerif};
-    color: ${colors.black};
-    background-color: ${colors.white};
+    width: 100vw;
+    height: 100vh;
+    font-family: ${fonts.serif};
+    font-size: ${dimensions.fontSize.large}rem;
+    line-height: ${dimensions.lineHeight.regular}rem;
+    color: ${colors.gray.main};
+    background-color: ${colors.background};
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+
+
+
+    ${mediaQuerie.xl} {
+      overflow: hidden;
+    }
   }
 
   a {
-    color: ${colors.brand};
+    color: inherit;
     text-decoration: none;
 
     &:hover,
     &:focus {
       text-decoration: underline;
+      color: ${colors.gray.main};
     }
   }
 
@@ -83,18 +96,32 @@ export default `
     }
   }
 
+  h1 {
+    &::selection {
+      background-color: transparent;
+      text-shadow:
+        0 0 ${colors.pink},
+        0 0.1rem ${colors.pink},
+        0 0.2rem ${colors.pink},
+        0 0.3rem ${colors.pink},
+        0 0.4rem ${colors.pink},
+        0 0.5rem ${colors.pink};
+    }
+  }
+
   h1, h2, h3, h4, h5, h6 {
     margin-top: 1.414rem;
     margin-bottom: .5rem;
-    color: ${colors.black};
+    color: ${colors.green};
     font-weight: 600;
-    line-height: ${dimensions.lineHeight.heading};
+    line-height: ${dimensions.lineHeight.heading}rem;
     text-rendering: optimizeLegibility;
   }
 
   h1 {
     margin-top: 0;
     font-size: ${dimensions.headingSizes.h1}rem;
+    line-height: ${dimensions.headingSizes.h1}rem;
   }
 
   h2 {
@@ -152,7 +179,7 @@ export default `
       }
     }
 
-    @media (min-width: ${getEmSize(breakpoints.md)}em) {
+    @media (min-width: ${getRemSize(breakpoints.md)}em) {
       padding-right: 5rem;
       padding-left: 1.25rem;
     }

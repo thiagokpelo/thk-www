@@ -9,7 +9,7 @@ declare module '*.module.scss' {
   export = cssModule
 }
 
-declare module '*.module.css' {
-  const cssModule: CSSModule
-  export = cssModule
+declare module '*.jpg' {
+  const value: any
+  export = value
 }

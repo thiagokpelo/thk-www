@@ -1,15 +1,33 @@
 import * as React from 'react'
 import { Global, css } from '@emotion/core'
 import styled from '@emotion/styled'
-import normalize from '../styles/normalize'
+import normalize from '@thk/styles/normalize'
+import { heights } from '@thk/styles/variables'
+import { mediaQuerie } from '@thk/helpers'
 
 const StyledLayoutRoot = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'header '
+    'main'
+    'footer';
+  grid-template-rows: auto 1fr ${heights!.footer}rem;
+  width: 100vw;
+  height: 100vh;
+
+  ${mediaQuerie!.xl} {
+    grid-template-columns: 25% 75%;
+    grid-template-areas:
+      'header main'
+      'footer footer';
+    grid-template-rows: 1fr ${heights!.footer}rem;
+    overflow: hidden;
+  }
 `
 
-interface LayoutRootProps {
+type LayoutRootProps = {
   className?: string
 }
 

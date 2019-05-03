@@ -1,18 +1,17 @@
-'use strict'
+// jshint ignore: start
 
 module.exports = {
   siteMetadata: {
-    title: 'gatsby-starter-typescript-plus',
+    title: 'Thiago Kpelo',
     description: 'A starter kit for TypeScript-based Gatsby projects with sensible defaults.',
     siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com',
     author: {
-      name: 'Resi Respati',
-      url: 'https://twitter.com/resir014',
-      email: 'resir014@gmail.com'
+      name: 'Thiago Kpelo',
+      url: 'https://twitter.com/thiagokpelo',
+      email: 'thiagokpelo@gmail.com'
     }
   },
-  plugins: [
-    {
+  plugins: [{
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'content',
@@ -22,8 +21,7 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [
-          {
+        plugins: [{
             resolve: 'gatsby-remark-responsive-iframe',
             options: {
               wrapperStyle: 'margin-bottom: 1rem'
@@ -48,6 +46,14 @@ module.exports = {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
         siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com'
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Patua+One:400', 'Cabin:400,700']
+        }
       }
     },
     'gatsby-plugin-emotion',

@@ -13,18 +13,26 @@ export const colors = {
   },
   code: '#fcf6f0',
   gray: {
-    dark: 'hsla(270, 17.119554496%, 0%, 0.92)',
-    copy: 'hsla(270, 15.797828016000002%, 0%, 0.88)',
-    calm: 'rgba(0, 0, 0, 0.54)'
+    main: '#c5c5c5',
+    dark: '#666666',
+    medium: '#8f919c',
+    calm: '#d8dae1'
   },
+  green: '#2de0a7',
+  pink: '#f46a99',
+  lightBlue: '#66d9ef',
+  blue: '#7aa5ff',
+  yellow: '#fad87c',
   white: '#fff',
-  black: '#000'
+  black: '#222237',
+  background: '#2a2b44'
 }
 
 export const fonts = {
   sansSerif:
-    '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif',
-  serif: 'Georgia, "Times New Roman", Times, serif',
+    '"Cabin", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif',
+  cursive: '"Patua One", cursive',
+  serif: 'Menlo, Monaco, "Courier New", monospace',
   monospace: 'Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, monospace'
 }
 
@@ -44,22 +52,23 @@ export const widths = {
 
 export const dimensions = {
   fontSize: {
-    regular: 16,
-    large: 18
+    base: 10,
+    regular: 1.6,
+    large: 1.8
   },
   headingSizes: {
-    h1: 2.441,
-    h2: 1.953,
-    h3: 1.563,
-    h4: 1.25
+    h1: 6.4,
+    h2: 3.2,
+    h3: 2.4,
+    h4: 2.0
   },
   lineHeight: {
-    regular: 1.45,
-    heading: 1.2
+    regular: 2.4,
+    heading: 2
   },
-  containerPadding: 1.5
+  containerPadding: 2.4
 }
 
 export const heights = {
-  header: 60
+  footer: 4
 }
