@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 
 import { dimensions, colors } from '@thk/styles/variables'
 import { mediaQuerie } from '@thk/helpers'
-// import Logo from '../logo'
+import Logo from '../logo'
 
 import { Nav } from './nav'
 
@@ -57,7 +57,7 @@ const Header: React.SFC<HeaderProps> = ({ title }) => (
     <HeaderNav />
     <HeaderInner>
       <HomepageLink to="/">
-        {/* <Logo /> */}
+        <Logo />
         <Title>{title}</Title>
       </HomepageLink>
       <Subtitle>javascript developer</Subtitle>
