@@ -10,14 +10,14 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "npm run clean && gatsby build",
+    "build": "yarn run clean && gatsby build",
     "clean": "rimraf public .cache",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "dev": "gatsby develop -H 0.0.0.0",
     "format": "prettier --write \"src/**/*.{ts,tsx,md}\"",
     "lint": "tslint 'src/**/*.{ts,tsx}' -p tsconfig.json",
-    "start": "npm run dev",
-    "test": "npm run type-check && npm run lint",
+    "start": "yarn run dev",
+    "test": "yarn run type-check && yarn run lint",
     "type-check": "tsc"
   },
   "engines": {
