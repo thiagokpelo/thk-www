@@ -10,13 +10,18 @@ const Contact = () => (
     <Page title="contact.ts">
       <Code alias="Contact" packageName="@thk/helpers" />
       <h2>Talk to me</h2>
-      <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-        <input type="hidden" name="bot-field" />
-        <input type="hidden" name="form-name" value="contact" />
+      <form id="contact-form" name="contact-form" data-netlify="true" action="/contact-sent">
         <TextField placeholder="Name" />
         <TextField placeholder="Email" />
         <TextField placeholder="Message..." as="textarea" rows="15" />
-        <button type="submit">Send</button>
+        <button
+          onClick={() => {
+            const form: HTMLFormElement | null = document.querySelector('#contact-form')
+            if (form) form.submit()
+          }}
+        >
+          Send
+        </button>
       </form>
 
       <h2>
