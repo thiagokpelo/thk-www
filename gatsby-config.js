@@ -20,23 +20,23 @@ module.exports = {
         background_color: `#222237`,
         theme_color: `#222237`,
         display: `minimal-ui`,
-        icon: `src/content/media/favicons/favicon-32x32.png`,
-        icons: [{
-            src: `src/content/media/favicons/favicon-192x192.png`,
-            sizes: `192x192`,
-            type: `image/png`,
-          },
-          {
-            src: `/favicons/apple-chrome-180x180.png`,
-            sizes: `180x180`,
-            type: `image/png`,
-          },
-          {
-            src: `/favicons/ms-chrome-310x310.png`,
-            sizes: `310x310`,
-            type: `image/png`,
-          },
-        ], // Add or remove icon sizes as desired
+        // icon: `src/content/media/favicons/favicon-32x32.png`,
+        // icons: [{
+        //     src: `src/content/media/favicons/favicon-192x192.png`,
+        //     sizes: `192x192`,
+        //     type: `image/png`,
+        //   },
+        // {
+        //   src: `/favicons/apple-chrome-180x180.png`,
+        //   sizes: `180x180`,
+        //   type: `image/png`,
+        // },
+        // {
+        //   src: `/favicons/ms-chrome-310x310.png`,
+        //   sizes: `310x310`,
+        //   type: `image/png`,
+        // },
+        // ], // Add or remove icon sizes as desired
       }
     },
     `gatsby-plugin-sitemap`,

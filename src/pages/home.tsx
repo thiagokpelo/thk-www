@@ -41,7 +41,7 @@ const Item = styled.div`
 `
 
 const ItemImage = styled(ItemLink)<{ src: string; align?: 'flex-start' | 'flex-end' | 'center' }>`
-  background: url(${({ src }) => CSS.escape(src)});
+  background: url(${({ src }) => src});
   background-size: cover;
   background-position: center;
 
