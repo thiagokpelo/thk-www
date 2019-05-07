@@ -1,24 +1,26 @@
 import * as React from 'react'
 
-import Image from '../components/image'
-import Page from '../components/Page'
-import IndexLayout from '../layouts'
-
-import { bootcampImg, fatherImg, loveImg, motherImg, palmeirasImg, umbandaImg } from '@thk/content/media'
+import Page from '@thk/components/Page'
+import GridImage from '@thk/components/grid-image'
+import IndexLayout from '@thk/layouts'
+import Code from '@thk/components/code'
 
 const Me = () => (
   <IndexLayout>
     <Page title="me.ts">
-      <Image src={bootcampImg} />
-      <h1>Me</h1>
-      <h4>Who am I?</h4>
+      <Code alias="Me" packageName="@thk/core" />
+
+      <h2>Who am I?</h2>
       <p>Fullstack developer - (Javascript | ReactJs | React Native | Nodejs)</p>
+
       <ul>
         <li>Groselha.io</li>
         <li>Mentor at gStudio</li>
+        <li>Support at Claro Brasil</li>
         <li>Bigland</li>
       </ul>
 
+      <h2>About me!</h2>
       <p>
         My career started 8 years ago, when I began studying Programming Logic, OOP, HTML5, Web Design, Javascript and jQuery. In the
         meantime I attended an ObjC Course which made me relate to the area of code and logic. I’ve made some projects regarding Hybrid Apps
@@ -32,17 +34,7 @@ const Me = () => (
         growth.
       </p>
 
-      <div
-        style={{
-          display: 'grid'
-        }}
-      >
-        <img src={fatherImg} />
-        <img src={motherImg} />
-        <img src={loveImg} />
-        <img src={palmeirasImg} />
-        <img src={umbandaImg} />
-      </div>
+      <GridImage />
     </Page>
   </IndexLayout>
 )

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
-import { dimensions, colors } from '../styles/variables'
+import { dimensions, colors } from '@thk/styles/variables'
 import { FaReact } from 'react-icons/fa'
 
 const StyledHeader = styled.header`

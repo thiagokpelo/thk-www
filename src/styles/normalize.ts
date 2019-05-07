@@ -25,7 +25,7 @@ export default `
   body {
     width: 100vw;
     height: 100vh;
-    font-family: ${fonts.serif};
+    font-family: ${fonts.monospace};
     font-size: ${dimensions.fontSize.large}rem;
     line-height: ${dimensions.lineHeight.regular}rem;
     color: ${colors.gray.main};
@@ -114,7 +114,7 @@ export default `
     margin-bottom: .5rem;
     color: ${colors.green};
     font-weight: 600;
-    line-height: ${dimensions.lineHeight.heading}rem;
+    line-height: 100%;
     text-rendering: optimizeLegibility;
   }
 

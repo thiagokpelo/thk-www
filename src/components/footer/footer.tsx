@@ -1,7 +1,7 @@
 import * as React from 'react'
-import SocialNav from '../social-nav'
+import SocialNav from '@thk/components/social-nav'
 import styled from '@emotion/styled'
-import { colors } from '@thk/styles/variables'
+import { colors, dimensions } from '@thk/styles/variables'
 import { mediaQuerie } from '@thk/helpers'
 
 const StyledFooter = styled.footer`
@@ -10,6 +10,7 @@ const StyledFooter = styled.footer`
   align-items: center;
   justify-content: center;
   width: 100%;
+  padding: ${dimensions.containerPadding}rem;
   background-color: ${colors.black};
 
   ${mediaQuerie.xl} {

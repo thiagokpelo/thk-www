@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { FaGithub, FaCodepen, FaLinkedin, FaTwitter, FaInstagram, FaMedium } from 'react-icons/fa'
 import styled from '@emotion/styled'
-import { colors } from '../../styles/variables'
+import { colors } from '@thk/styles/variables'
 
 const Nav = styled.nav`
-  a:not(:first-child) {
+  a:not(:first-of-type) {
     margin-left: 15px;
   }
 

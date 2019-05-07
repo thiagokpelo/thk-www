@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 
 import { dimensions, colors } from '@thk/styles/variables'
 import { mediaQuerie } from '@thk/helpers'
-import Logo from '../logo'
+import Logo from '@thk/components/logo'
 
 import { Nav } from './nav'
 
@@ -27,7 +27,9 @@ const HeaderNav = styled(Nav)`
 
 const HeaderInner = styled.div`
   display: flex;
+  flex: 1;
   flex-direction: column;
+  align-items: center;
   justify-content: flex-end;
   height: 100%;
 `
@@ -37,15 +39,6 @@ const HomepageLink = styled(Link)`
   &:focus {
     text-decoration: none;
   }
-`
-
-const Title = styled.h1``
-
-const Subtitle = styled.h2`
-  font-size: ${dimensions.headingSizes.h4}rem;
-  line-height: ${dimensions.headingSizes.h4}rem;
-  font-weight: 400;
-  color: inherit;
 `
 
 interface HeaderProps {
@@ -58,9 +51,7 @@ const Header: React.SFC<HeaderProps> = ({ title }) => (
     <HeaderInner>
       <HomepageLink to="/">
         <Logo />
-        <Title>{title}</Title>
       </HomepageLink>
-      <Subtitle>javascript developer</Subtitle>
     </HeaderInner>
   </StyledHeader>
 )

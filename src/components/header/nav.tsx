@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
-import { FaFolderOpen, FaCodeBranch, FaBug, FaDocker } from 'react-icons/fa'
+import { FaFolderOpen, FaCodeBranch, FaBug, FaDocker, FaBookmark } from 'react-icons/fa'
 import { colors } from '@thk/styles/variables'
 import { mediaQuerie } from '@thk/helpers'
 
@@ -49,6 +49,9 @@ const Nav: React.FC<{}> = () => (
     </StyledLink>
     <StyledLink to="/contact">
       <FaDocker />
+    </StyledLink>
+    <StyledLink to="/favorites">
+      <FaBookmark />
     </StyledLink>
   </StyledNav>
 )
