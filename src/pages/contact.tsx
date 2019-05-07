@@ -11,9 +11,9 @@ const Contact = () => (
       <Code alias="Contact" packageName="@thk/helpers" />
       <h2>Talk to me</h2>
       <form id="contact-form" name="contact-form" data-netlify="true" action="/contact-sent">
-        <TextField placeholder="Name" />
-        <TextField placeholder="Email" />
-        <TextField placeholder="Message..." as="textarea" rows="15" />
+        <TextField name="name" placeholder="Name" />
+        <TextField name="email" placeholder="Email" />
+        <TextField name="message" placeholder="Message..." as="textarea" rows="15" />
         <button
           onClick={() => {
             const form: HTMLFormElement | null = document.querySelector('#contact-form')
