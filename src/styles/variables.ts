@@ -4,8 +4,8 @@ export const colors = {
   brand: '#663399',
   lilac: '#9d7cbf',
   accent: '#ffb238',
-  success: '#37b635',
-  warning: '#ec1818',
+  success: '#0fbc79',
+  error: '#f92771',
   ui: {
     bright: '#e0d6eb',
     light: '#f5f3f7',

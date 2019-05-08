@@ -1,28 +1,45 @@
 import * as React from 'react'
+import styled from '@emotion/styled'
 
 import Page from '@thk/components/Page'
 import IndexLayout from '@thk/layouts'
 import TextField from '@thk/components/text-field'
 import Code from '@thk/components/code'
+import { colors } from '@thk/styles/variables'
+import { MdArrowForward } from 'react-icons/md'
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 600px;
+`
+
+const Button = styled.button`
+  background-color: transparent;
+  border: 0;
+  color: ${colors.white};
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`
 
 const Contact = () => (
   <IndexLayout>
     <Page title="contact.ts">
       <Code alias="Contact" packageName="@thk/helpers" />
       <h2>Talk to me</h2>
-      <form id="contact-form" name="contact-form" data-netlify="true" action="/contact-sent">
-        <TextField name="name" placeholder="Name" />
-        <TextField name="email" placeholder="Email" />
+      <Form id="contact-form" name="contact-form" data-netlify="true" action="/contact-sent">
+        <TextField name="name" type="text" placeholder="Name" />
+        <TextField name="email" type="email" placeholder="Email" />
         <TextField name="message" placeholder="Message..." as="textarea" rows="15" />
-        <button
-          onClick={() => {
-            const form: HTMLFormElement | null = document.querySelector('#contact-form')
-            if (form) form.submit()
-          }}
-        >
-          Send
-        </button>
-      </form>
+        <Button type="submit">
+          Send <MdArrowForward />
+        </Button>
+      </Form>
 
       <h2>
         São Paulo
