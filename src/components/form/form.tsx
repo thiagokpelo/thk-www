@@ -65,11 +65,11 @@ export const Form: React.FC<{}> = () => {
       if (formValidate.length > 0) {
         createAlert(formValidate as any)
       } else {
-        console.log(encode(form.value))
+        // console.log(encode(form.value))
         fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: encode(form.value)
+          body: encode(form)
         })
           .then(() => {
             form.reset()
