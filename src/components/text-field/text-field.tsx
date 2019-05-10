@@ -3,7 +3,14 @@ import styled from '@emotion/styled'
 import { colors } from '@thk/styles/variables'
 import css from '@emotion/css'
 
-const StyledTextField = styled.input`
+type Status = 'error' | null
+
+type TextFieldProps = {
+  label?: string
+  status?: Status
+} & React.HTMLProps<HTMLInputElement | HTMLTextAreaElement>
+
+const StyledTextField = styled.input<any>`
   position: relative;
   width: 100%;
   border-radius: 0;
@@ -20,16 +27,18 @@ const StyledTextField = styled.input`
   }
 `
 
-const StyledLabel = styled.label<{ status: 'error' | null }>`
+const StyledLabel = styled.label<{ status: Status }>`
   width: 100%;
 
   ${StyledTextField} {
-    outline: 0;
+    outline: 0 !important;
+    box-shadow: none;
+    transition: box-shadow 0.32s ease-in-out;
 
     &:focus {
-      outline: 3px solid ${colors.black};
+      box-shadow: 0px 0px 0px 2px inset ${colors.black};
       z-index: 2;
-      transition: outline 0.16s ease-in-out;
+      transition: box-shadow 0.16s ease-in-out;
     }
 
     ${props =>
@@ -40,14 +49,14 @@ const StyledLabel = styled.label<{ status: 'error' | null }>`
         z-index: 2;
 
         &:focus {
-          outline: 3px solid ${colors.error};
-          transition: outline 0.16s ease-in-out;
+          box-shadow: 0px 0px 0px 2px inset ${colors.error};
+          transition: box-shadow 0.16s ease-in-out;
         }
       `}
   }
 `
 
-export const TextFieldComponent = ({ label, status, ...props }: any) => (
+export const TextFieldComponent: React.FC<TextFieldProps> = ({ label, status = null, ...props }): JSX.Element => (
   <StyledLabel status={status}>
     {label}
     <StyledTextField {...props} />

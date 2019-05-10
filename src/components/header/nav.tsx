@@ -50,9 +50,6 @@ const Nav: React.FC<{}> = () => (
     <StyledLink to="/contact">
       <FaDocker />
     </StyledLink>
-    <StyledLink to="/favorites">
-      <FaBookmark />
-    </StyledLink>
   </StyledNav>
 )
 
