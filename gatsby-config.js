@@ -3,8 +3,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Thiago Kpelo',
-    description: 'A starter kit for TypeScript-based Gatsby projects with sensible defaults.',
-    siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com',
+    description: 'Fullstack developer - (Javascript | ReactJs | React Native | Nodejs)',
+    siteUrl: 'https://thiagokpelo.dev',
     author: {
       name: 'Thiago Kpelo',
       url: 'https://twitter.com/thiagokpelo',

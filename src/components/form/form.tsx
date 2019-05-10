@@ -58,26 +58,27 @@ export const Form: React.FC<{}> = () => {
     if (form !== null) {
       const formValidate = validateForm(form.elements as any) || []
 
+      ev.preventDefault()
+
       if (formValidate.length > 0) {
         createAlert(formValidate as any)
-      } else {
-        console.log(encode(form.value))
-        fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: encode(form.value)
-        })
-          .then(() => {
-            form.reset()
-            createAlert([{ status: 'done', message: 'Success sent!' }])
-          })
-          .catch(error => {
-            createAlert([{ status: 'error', message: error.message }])
-          })
+        return
       }
-    }
 
-    ev.preventDefault()
+      console.log(encode(form.value))
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode(form.value)
+      })
+        .then(() => {
+          form.reset()
+          createAlert([{ status: 'done', message: 'Success sent!' }])
+        })
+        .catch(error => {
+          createAlert([{ status: 'error', message: error.message }])
+        })
+    }
   }
 
   return (
