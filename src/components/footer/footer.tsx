@@ -1,6 +1,8 @@
 import * as React from 'react'
-import SocialNav from '@thk/components/social-nav'
 import styled from '@emotion/styled'
+
+import SocialNav from '@thk/components/social-nav'
+
 import { colors, dimensions } from '@thk/styles/variables'
 import { mediaQuerie } from '@thk/helpers'
 

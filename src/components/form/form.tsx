@@ -1,7 +1,8 @@
-import React from 'react'
+import * as React from 'react'
 import styled from '@emotion/styled'
 
 import { MdArrowForward } from 'react-icons/md'
+import { TerminalContext, ITerminalPost } from '@thk/components/terminal'
 import TextField from '@thk/components/text-field'
 
 import { colors } from '@thk/styles/variables'
@@ -25,23 +26,74 @@ const Button = styled.button`
   }
 `
 
-export const Form: React.FC<any> = () => {
-  const handleSubmit = (evt: React.FormEvent<any>) => {
-    evt.preventDefault()
+const encode = (data: any) => {
+  return Object.keys(data)
+    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .join('&')
+}
 
+/* tslint:disable-next-line */
+const validateForm = (elements: Array<HTMLInputElement | HTMLTextAreaElement> = []) => {
+  if (elements !== []) {
+    return Array.from(elements)
+      .filter(element => element.tagName !== 'BUTTON')
+      .map(field => {
+        console.dir(field)
+        if (!field.validity!.valid) {
+          return {
+            field: field.name,
+            status: 'error',
+            message: `'${field.name}': ${field.validationMessage}`
+          }
+        }
+      })
+      .filter(f => f !== undefined)
+  }
+}
+
+export const Form: React.FC<{}> = () => {
+  const handleSubmit = (ev: React.FormEvent, createAlert: (posts: ITerminalPost[]) => void) => {
     const form: HTMLFormElement | null = document.querySelector('#contact-form')
-    if (form) form.submit()
+
+    if (form !== null) {
+      const formValidate = validateForm(form.elements as any) || []
+
+      if (formValidate.length > 0) {
+        createAlert(formValidate as any)
+      } else {
+        fetch('/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: encode(form)
+        })
+          .then(() => {
+            form.reset()
+            createAlert([{ status: 'done', message: 'Success sent!' }])
+          })
+          .catch(error => {
+            createAlert([{ status: 'error', message: error.message }])
+          })
+      }
+    }
+
+    ev.preventDefault()
   }
 
   return (
-    <FormComponent id="contact-form" name="contact-form" method="POST" data-netlify-honeypot="bot-field" action="/contact-sent">
-      <input type="hidden" name="form-name" value="contact-form" />
-      <TextField name="name" type="text" placeholder="Name" required />
-      <TextField name="email" type="email" placeholder="Email" required />
-      <TextField name="message" placeholder="Message..." as="textarea" rows={15} required />
-      <Button onClick={handleSubmit}>
-        Send <MdArrowForward />
-      </Button>
-    </FormComponent>
+    <TerminalContext.Consumer>
+      {({ createAlert }: any) => (
+        <React.Fragment>
+          <FormComponent id="contact-form" name="contact-form" method="POST" data-netlify-honeypot="bot-field" action="/contact-sent">
+            <input type="hidden" name="form-name" value="contact-form" />
+            <TextField name="name" type="text" placeholder="Name" required />
+            <TextField name="email" type="email" placeholder="Email" required />
+            <TextField name="message" placeholder="Message..." as="textarea" rows={15} required />
+            <Button onClick={ev => handleSubmit(ev, createAlert)}>
+              Send <MdArrowForward />
+            </Button>
+          </FormComponent>
+        </React.Fragment>
+      )}
+    </TerminalContext.Consumer>
   )
 }

@@ -4,8 +4,10 @@ import styled from '@emotion/styled'
 import normalize from '@thk/styles/normalize'
 import { heights } from '@thk/styles/variables'
 import { mediaQuerie } from '@thk/helpers'
+import { WrapperTerminal } from '@thk/components/terminal'
 
 const StyledLayoutRoot = styled.div`
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
@@ -15,7 +17,6 @@ const StyledLayoutRoot = styled.div`
     'footer';
   grid-template-rows: auto 1fr ${heights!.footer}rem;
   width: 100vw;
-  height: 100vh;
 
   ${mediaQuerie!.xl} {
     grid-template-columns: 25% 75%;
@@ -23,6 +24,7 @@ const StyledLayoutRoot = styled.div`
       'header main'
       'footer footer';
     grid-template-rows: 1fr ${heights!.footer}rem;
+    height: 100vh;
     overflow: hidden;
   }
 `
@@ -33,8 +35,10 @@ type LayoutRootProps = {
 
 const LayoutRoot: React.SFC<LayoutRootProps> = ({ children, className }) => (
   <>
-    <Global styles={() => css(normalize)} />
-    <StyledLayoutRoot className={className}>{children}</StyledLayoutRoot>
+    <WrapperTerminal>
+      <Global styles={() => css(normalize)} />
+      <StyledLayoutRoot className={className}>{children}</StyledLayoutRoot>
+    </WrapperTerminal>
   </>
 )
 

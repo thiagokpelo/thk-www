@@ -3,12 +3,13 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import 'modern-normalize'
-import '../styles/normalize'
+import '@thk/styles/normalize'
 
-import Header from '../components/header'
-import Footer from '../components/footer'
-import LayoutRoot from '../components/LayoutRoot'
-import LayoutMain from '../components/LayoutMain'
+import Header from '@thk/components/header'
+import Footer from '@thk/components/footer'
+import LayoutRoot from '@thk/components/LayoutRoot'
+import LayoutMain from '@thk/components/LayoutMain'
+import Terminal from '@thk/components/terminal'
 
 interface StaticQueryProps {
   site: {
@@ -43,6 +44,7 @@ const IndexLayout: React.SFC = ({ children }) => (
         <Header title={data.site.siteMetadata.title} />
         <LayoutMain>{children}</LayoutMain>
         <Footer />
+        <Terminal />
       </LayoutRoot>
     )}
   />

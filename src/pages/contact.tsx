@@ -5,11 +5,6 @@ import Code from '@thk/components/code'
 import Page from '@thk/components/Page'
 import FormContact from '@thk/components/form'
 
-function handleOnSubmit(evt: React.FormEvent<HTMLInputElement>): void {
-  // evt.preventDefault()
-  console.log(`Contact Page:`, evt)
-}
-
 const Contact = () => (
   <IndexLayout>
     <Page title="contact.ts">
