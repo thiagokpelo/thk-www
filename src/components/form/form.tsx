@@ -16,13 +16,15 @@ const FormComponent = styled.form`
 `
 
 const Button = styled.button`
+  display: flex;
+  margin-left: auto;
   background-color: transparent;
   border: 0;
   color: ${colors.white};
   cursor: pointer;
 
-  &:hover {
-    text-decoration: underline;
+  * {
+    margin-left: 1rem;
   }
 `
 
