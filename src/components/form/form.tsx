@@ -61,10 +61,11 @@ export const Form: React.FC<{}> = () => {
       if (formValidate.length > 0) {
         createAlert(formValidate as any)
       } else {
-        fetch('/contact', {
+        console.log(encode(form.value))
+        fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: encode(form)
+          body: encode(form.value)
         })
           .then(() => {
             form.reset()
@@ -83,7 +84,7 @@ export const Form: React.FC<{}> = () => {
     <TerminalContext.Consumer>
       {({ createAlert }: any) => (
         <React.Fragment>
-          <FormComponent id="contact-form" name="contact-form" method="POST" data-netlify-honeypot="bot-field" action="/contact-sent">
+          <FormComponent id="contact-form" name="contact-form" method="POST" data-netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contact-form" />
             <TextField name="name" type="text" placeholder="Name" required />
             <TextField name="email" type="email" placeholder="Email" required />
