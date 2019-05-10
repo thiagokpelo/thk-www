@@ -64,22 +64,21 @@ export const Form: React.FC<{}> = () => {
 
       if (formValidate.length > 0) {
         createAlert(formValidate as any)
-        return
+      } else {
+        console.log(encode(form.value))
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: encode(form.value)
+        })
+          .then(() => {
+            form.reset()
+            createAlert([{ status: 'done', message: 'Success sent!' }])
+          })
+          .catch(error => {
+            createAlert([{ status: 'error', message: error.message }])
+          })
       }
-
-      console.log(encode(form.value))
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode(form.value)
-      })
-        .then(() => {
-          form.reset()
-          createAlert([{ status: 'done', message: 'Success sent!' }])
-        })
-        .catch(error => {
-          createAlert([{ status: 'error', message: error.message }])
-        })
     }
   }
 
