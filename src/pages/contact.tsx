@@ -20,17 +20,17 @@ const Contact = () => (
 
       <ul>
         <li>
-          <a href="https://glambox.com.br" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/thiagokpelo" target="_blank" rel="noopener noreferrer">
             Github
           </a>
         </li>
         <li>
-          <a href="https://amil.com.br" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/thiago-capelo-0156446a" target="_blank" rel="noopener noreferrer">
             Linkedin
           </a>
         </li>
         <li>
-          <a href="https://printi.com.br" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/5511973498187" target="_blank" rel="noopener noreferrer">
             (+55 11) 973 498 187
           </a>
         </li>
