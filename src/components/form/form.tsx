@@ -29,8 +29,9 @@ const Button = styled.button`
 `
 
 const encode = (data: any) => {
-  return Object.keys(data)
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+  return Array.from(data)
+    .filter(element => !Array.isArray(element))
+    .map(field => `${encodeURIComponent(field.name)}=${encodeURIComponent(field.value)}`)
     .join('&')
 }
 
@@ -65,7 +66,8 @@ export const Form: React.FC<{}> = () => {
       if (formValidate.length > 0) {
         createAlert(formValidate as any)
       } else {
-        // console.log(encode(form.value))
+        console.dir(form.elements)
+        console.log(encode(form.elements))
         fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
