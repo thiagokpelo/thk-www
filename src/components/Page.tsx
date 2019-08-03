@@ -37,7 +37,7 @@ interface PageProps {
   title?: string
 }
 
-const Page: React.SFC<PageProps> = ({ children, title }) => (
+const Page: React.SFC<PageProps> = ({ children, title = '' }) => (
   <React.Fragment>
     <StyledHeader>
       <ReactIcon />
