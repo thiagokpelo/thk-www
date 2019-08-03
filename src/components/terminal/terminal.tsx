@@ -63,7 +63,8 @@ const StyledPost = styled.p<{ status: 'error' | 'done' | null | undefined }>`
 
   span {
     text-transform: uppercase;
-    background-color: ${({ status }) => (status === 'done' ? colors.green : colors.error)};
+    background-color: ${({ status }) =>
+      status === 'done' ? colors.green : colors.error};
     color: ${colors.background};
     padding: 2px 4px;
   }
@@ -84,7 +85,11 @@ const TerminalComponent: React.FC<{}> = () => (
           <MdClose role="button" onClick={terminal!.hideTerminal} />
         </Header>
         <Content>
-          {terminal!.posts && terminal!.posts.length > 0 ? terminal!.posts.map((post, index) => <Post key={index} data={post} />) : null}
+          {terminal!.posts && terminal!.posts.length > 0
+            ? terminal!.posts.map((post, index) => (
+                <Post key={index} data={post} />
+              ))
+            : null}
         </Content>
       </StyledTerminal>
     )}

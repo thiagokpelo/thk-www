@@ -56,7 +56,11 @@ const StyledLabel = styled.label<{ status: Status }>`
   }
 `
 
-export const TextFieldComponent: React.FC<TextFieldProps> = ({ label, status = null, ...props }): JSX.Element => (
+export const TextFieldComponent: React.FC<TextFieldProps> = ({
+  label,
+  status = null,
+  ...props
+}): JSX.Element => (
   <StyledLabel status={status}>
     {label}
     <StyledTextField {...props} />

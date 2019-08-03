@@ -15,7 +15,9 @@ export const Code: React.FC<{
   packageName?: string
 }> = ({ alias, packageName }) => (
   <div>
-    <StyledCode color="blue">import</StyledCode> <StyledCode color="pink">{alias}</StyledCode> <StyledCode color="blue">from</StyledCode>{' '}
+    <StyledCode color="blue">import</StyledCode>{' '}
+    <StyledCode color="pink">{alias}</StyledCode>{' '}
+    <StyledCode color="blue">from</StyledCode>{' '}
     <StyledCode color="green">
       {`'`}
       {packageName}

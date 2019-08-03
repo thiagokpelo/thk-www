@@ -31,12 +31,17 @@ const Button = styled.button`
 const encode = (data: any) => {
   return Array.from(data)
     .filter(element => !Array.isArray(element))
-    .map(field => `${encodeURIComponent(field.name)}=${encodeURIComponent(field.value)}`)
+    .map(
+      field =>
+        `${encodeURIComponent(field.name)}=${encodeURIComponent(field.value)}`
+    )
     .join('&')
 }
 
 /* tslint:disable-next-line */
-const validateForm = (elements: Array<HTMLInputElement | HTMLTextAreaElement> = []) => {
+const validateForm = (
+  elements: Array<HTMLInputElement | HTMLTextAreaElement> = []
+) => {
   if (elements !== []) {
     return Array.from(elements)
       .filter(element => element.tagName !== 'BUTTON')
@@ -55,7 +60,10 @@ const validateForm = (elements: Array<HTMLInputElement | HTMLTextAreaElement> = 
 }
 
 export const Form: React.FC<{}> = () => {
-  const handleSubmit = (ev: React.FormEvent, createAlert: (posts: ITerminalPost[]) => void) => {
+  const handleSubmit = (
+    ev: React.FormEvent,
+    createAlert: (posts: ITerminalPost[]) => void
+  ) => {
     const form: HTMLFormElement | null = document.querySelector('#contact-form')
 
     if (form !== null) {
@@ -88,11 +96,22 @@ export const Form: React.FC<{}> = () => {
     <TerminalContext.Consumer>
       {({ createAlert }: any) => (
         <React.Fragment>
-          <FormComponent id="contact-form" name="contact-form" method="POST" data-netlify-honeypot="bot-field">
+          <FormComponent
+            id="contact-form"
+            name="contact-form"
+            method="POST"
+            data-netlify-honeypot="bot-field"
+          >
             <input type="hidden" name="form-name" value="contact-form" />
             <TextField name="name" type="text" placeholder="Name" required />
             <TextField name="email" type="email" placeholder="Email" required />
-            <TextField name="message" placeholder="Message..." as="textarea" rows={15} required />
+            <TextField
+              name="message"
+              placeholder="Message..."
+              as="textarea"
+              rows={15}
+              required
+            />
             <Button onClick={ev => handleSubmit(ev, createAlert)}>
               Send <MdArrowForward />
             </Button>

@@ -7,4 +7,7 @@ const StyledImage = styled.img`
   height: auto;
 `
 
-export const Image: React.FC<{ src?: any }> = ({ src }) => <StyledImage src={src} alt="Thiago Capelo" />
+export const Image: React.FC<{ alt: string; src?: string }> = ({
+  alt,
+  src
+}) => <StyledImage src={src} alt={alt} />

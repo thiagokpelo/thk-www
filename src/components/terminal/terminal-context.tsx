@@ -49,6 +49,10 @@ export class WrapperTerminal extends React.Component<ITerminal, ITerminal> {
   }
 
   render() {
-    return <TerminalContext.Provider value={this.state}>{this.props.children}</TerminalContext.Provider>
+    return (
+      <TerminalContext.Provider value={this.state}>
+        {this.props.children}
+      </TerminalContext.Provider>
+    )
   }
 }

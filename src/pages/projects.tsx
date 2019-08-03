@@ -34,7 +34,10 @@ const Projects = () => (
             <li>Build reusable code and libraries for future use</li>
             <li>Ensure the technical feasibility of UI/UX designs</li>
             <li>Optimize application for maximum speed and scalability</li>
-            <li>Assure that all user input is validated before submitting to back-end</li>
+            <li>
+              Assure that all user input is validated before submitting to
+              back-end
+            </li>
             <li>Collaborate with other team members and stakeholders</li>
           </ul>
         </JobListItem>

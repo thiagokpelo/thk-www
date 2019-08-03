@@ -2,17 +2,12 @@
 
 root = true
 
-[*]
+[*.{ts,tsx,js,jsx}]
 indent_style = space
 indent_size = 2
 charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[*.py]
-indent_style = space
-indent_size = 4
-
-[*.rb]
-indent_style = space
+[*.{json,*-workspace}]
 indent_size = 4

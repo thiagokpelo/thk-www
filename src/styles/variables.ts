@@ -33,7 +33,8 @@ export const fonts = {
     '"Cabin", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif',
   cursive: '"Patua One", cursive',
   serif: 'Menlo, Monaco, "Courier New", monospace',
-  monospace: '"Roboto Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace, monospace'
+  monospace:
+    '"Roboto Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace, monospace'
 }
 
 export const breakpoints = {

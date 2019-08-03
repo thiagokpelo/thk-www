@@ -37,8 +37,14 @@ const IndexLayout: React.SFC = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: data.site.siteMetadata.description },
-            { name: 'keywords', content: 'gatsbyjs, gatsby, javascript, sample, something' }
+            {
+              name: 'description',
+              content: data.site.siteMetadata.description
+            },
+            {
+              name: 'keywords',
+              content: 'gatsbyjs, gatsby, javascript, sample, something'
+            }
           ]}
         />
         <Header title={data.site.siteMetadata.title} />

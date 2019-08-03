@@ -52,4 +52,6 @@ export const JobListItem: React.FC<JobListItemType> = props => (
   </>
 )
 
-export const JobList: React.FC<{}> = ({ children }): JSX.Element => <StyledList>{children}</StyledList>
+export const JobList: React.FC<{}> = ({ children }): JSX.Element => (
+  <StyledList>{children}</StyledList>
+)
