@@ -1,7 +1,7 @@
 import { mediaQuerie } from '@thk/helpers'
 import styled from '@emotion/styled'
 
-const Grid = styled.section`
+const Container = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: 1fr;
@@ -14,4 +14,4 @@ const Grid = styled.section`
   }
 `
 
-export default Grid
+export default Container

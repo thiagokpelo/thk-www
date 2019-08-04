@@ -1,40 +1,38 @@
 import * as React from 'react'
 
 import Page from '@thk/components/Page'
+import * as GridNavigation from '@thk/components/grid-navigation'
 import IndexLayout from '@thk/layouts'
 
 import { colors } from '@thk/styles/variables'
 
-import Grid from './grid'
-import GridItem from './grid-item'
-
 const Home = () => (
   <IndexLayout>
     <Page title="index.ts">
-      <Grid>
-        <GridItem.Image
+      <GridNavigation.Container>
+        <GridNavigation.ItemImage
           to="/me"
           src="https://res.cloudinary.com/dmmhdwajy/image/upload/v1564859120/profile_uoom4f.jpg"
           alt="I'm coding just like a rapper"
           align="flex-end"
         >
           Who am I?
-        </GridItem.Image>
-        <GridItem.Image
+        </GridNavigation.ItemImage>
+        <GridNavigation.ItemImage
           to="/projects"
           src="https://res.cloudinary.com/dmmhdwajy/image/upload/v1564859120/code-wine_wxhph4.jpg"
           alt="Code with wine! Hummmmmm!"
         >
           See some projects
-        </GridItem.Image>
-        <GridItem.Image
+        </GridNavigation.ItemImage>
+        <GridNavigation.ItemImage
           to="/contact"
           src="https://res.cloudinary.com/dmmhdwajy/image/upload/v1564859120/code-coffee_x3boga.jpg"
           alt="Coffe and code are the perfect combination"
         >
           Talk to me
-        </GridItem.Image>
-        <GridItem.Content style={{ padding: '1rem 0 0 1rem' }}>
+        </GridNavigation.ItemImage>
+        <GridNavigation.ItemContent style={{ padding: '1rem 0 0 1rem' }}>
           <span
             style={{
               color: '#fff',
@@ -59,8 +57,8 @@ const Home = () => (
           >
             {'/>'}
           </span>
-        </GridItem.Content>
-      </Grid>
+        </GridNavigation.ItemContent>
+      </GridNavigation.Container>
     </Page>
   </IndexLayout>
 )

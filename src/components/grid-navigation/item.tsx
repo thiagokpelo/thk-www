@@ -19,7 +19,7 @@ const GridItem = styled.div`
   flex: 1;
 `
 
-const Image = styled(GridItemLink)<{
+export const Image = styled(GridItemLink)<{
   align?: 'flex-start' | 'flex-end' | 'center'
   alt: string
   src: string
@@ -32,8 +32,6 @@ const Image = styled(GridItemLink)<{
   justify-content: flex-end;
   padding: 24px;
 `
-const Content = styled(GridItem)`
+export const Content = styled(GridItem)`
   justify-content: center;
 `
-
-export default { Content, Image }
