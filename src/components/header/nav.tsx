@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
-import { Link } from 'gatsby'
+import { Link } from 'gatsby-plugin-intl'
 import { FaFolderOpen, FaCodeBranch, FaBug, FaDocker } from 'react-icons/fa'
 import { colors } from '@thk/styles/variables'
 import { mediaQuerie } from '@thk/helpers'

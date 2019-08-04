@@ -1,0 +1,92 @@
+{
+    "home": {
+        "links": {
+            "me": {
+                "text": "Who am I?",
+                "alt": "I'm coding just like a rapper"
+            },
+            "projects": {
+                "text": "See some projects",
+                "alt": "Code with wine! Hummmmmm!"
+            },
+            "contact": {
+                "text": "Talk to me",
+                "alt": "Coffe and code are the perfect combination"
+            }
+        },
+        "hello": "Hello,",
+        "world": "world",
+        "name": "I'm Thiago Kpelo",
+        "welcome": "Welcome to my portfolio site."
+    },
+    "me": {
+        "who-am-i": {
+            "title": "Who am I?",
+            "description": "Fullstack developer - (Javascript | ReactJs | React Native | Nodejs)",
+            "jobs": "<li>Specialist Front end developer at Beleza na Web</li><li>Groselha.io</li><li>Mentor at gStudio</li><li>Support at Claro Brasil</li><li>Bigland</li>"
+        },
+        "about-me": {
+            "title": "About me!",
+            "description": "My career started 8 years ago, when I began studying Programming Logic, OOP, HTML5, Web Design, Javascript and jQuery. In the meantime I attended an ObjC Course which made me relate to the area of code and logic. I’ve made some projects regarding Hybrid Apps on Cordova and Ionic framework. I have some experience with PHP (OOP) using Symfony framework on admin projects and creating Rest APIs to be consumed on Front-end with Angular and jQuery. I also have built many institutional websites with HTML5, CSS3, JS , PHP and MySQL. I worked for a few months with Asp.Net MVC with SQL Server database and later my team and I changed the server language from C# to NodeJs and we consumed the API written on Java. On this project we recreated the whole server on Node with HapiJs framework making calls to SQL Server and through API and on client we utilized Angular with Nunjucks template rendering. I have been specializing as a Fullstack developer attending back-end courses such as .NetCore, ReactNative, Flutter, GraphQL, among others. Nowadays I am on a front-end team that works with multi languages and I’m always studying new technologies for my professional growth."
+        },
+        "images": {
+            "my-workspace": "My workspace",
+            "home-office": "My workplace with a look from outside",
+            "mother": "The loves of my life! My two brothers, my sister and my mom 💚",
+            "my-love": "My love, my friend, my queen, my everybody! My wife 👸🏾",
+            "dad": "My dad, my brother (@DiogoKpelo) and me",
+            "palmeiras": "Green and white are the color of my obsession! (Palmeiras Soccer Team) The champtions of Brasilerião 2018 🐷"
+        }
+    },
+    "projects": {
+        "what-i-already-do": {
+            "title": "What I already did",
+            "jobs": {
+                "blz": {
+                    "name": "Beleza na Web",
+                    "job-description": "fullstack developer",
+                    "list": "<li>Component library development</li><li>Definition and structure of design tokens</li><li>Choice of technology stack</li>"
+                },
+                "claro": {
+                    "name": "Claro",
+                    "job-description": "fullstack developer",
+                    "list": "<li>Component library development</li><li>Definition and structure of design tokens</li><li>Choice of technology stack</li>"
+                },
+                "amil": {
+                    "name": "Amil",
+                    "job-description": "frontend developer",
+                    "list": "<li>New features development</li><li>Ui/Ux</li><li>Application optimization</li><li>Building hybrid applications</li>"
+                },
+                "glambox": {
+                    "name": "Glambox",
+                    "job-description": "fullstack developer",
+                    "list": "<li>New architecture design with AngularJS and NodeJs</li><li>Develop new user-facing features</li><li>Build reusable code and libraries for future use</li><li>Ensure the technical feasibility of UI/UX designs</li><li>Optimize application for maximum speed and scalability</li><li>Assure that all user input is validated before submitting toback-end</li><li>Collaborate with other team members and stakeholders</li>"
+                },
+                "printi": {
+                    "name": "Printi",
+                    "job-description": "fullstack developer",
+                    "list": "<li>Component library development</li><li>Definition and structure of design tokens</li><li>Choice of technology stack</li>"
+                },
+                "meiuca": {
+                    "name": "Meiuca",
+                    "job-description": "technical leader",
+                    "list": "<li>Component library development</li><li>Definition and structure of design tokens</li><li>Choice of technology stack</li><li>Design System bootcamp instructor</li>"
+                }
+            }
+        }
+    },
+    "contact": {
+        "title": "Talk to me"
+    },
+    "not-found": {
+        "title": "404: Page not found.",
+        "description": "You've hit the void. ",
+        "go-back": "Go back."
+    },
+    "form": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "send": "Send"
+    }
+}

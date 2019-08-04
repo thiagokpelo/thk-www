@@ -1,15 +1,16 @@
 import * as React from 'react'
+import { injectIntl } from 'gatsby-plugin-intl'
 
 import IndexLayout from '@thk/layouts'
 import Code from '@thk/components/code'
 import Page from '@thk/components/Page'
 import FormContact from '@thk/components/form'
 
-const Contact = () => (
+const Contact = ({ intl }: any) => (
   <IndexLayout>
     <Page title="contact.ts">
       <Code alias="Contact" packageName="@thk/helpers" />
-      <h2>Talk to me</h2>
+      <h2>{intl.formatMessage({ id: 'home.links.contact.text' })}</h2>
 
       <FormContact />
 
@@ -51,4 +52,4 @@ const Contact = () => (
   </IndexLayout>
 )
 
-export default Contact
+export default injectIntl(Contact)

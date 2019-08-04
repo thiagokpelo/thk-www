@@ -1,21 +1,22 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
+import { injectIntl, Link } from 'gatsby-plugin-intl'
 
 import Page from '@thk/components/Page'
 import Container from '@thk/components/Container'
 import IndexLayout from '@thk/layouts'
 
-const NotFoundPage = () => (
+const NotFoundPage = ({ intl }: any) => (
   <IndexLayout>
     <Page>
       <Container>
-        <h1>404: Page not found.</h1>
+        <h1>{intl.formatMessage({ id: 'not-found.title' })}</h1>
         <p>
-          You've hit the void. <Link to="/">Go back.</Link>
+          {intl.formatMessage({ id: 'not-found.description' })}
+          <Link to="/">{intl.formatMessage({ id: 'not-found.go-back' })}</Link>
         </p>
       </Container>
     </Page>
   </IndexLayout>
 )
 
-export default NotFoundPage
+export default injectIntl(NotFoundPage)

@@ -3,7 +3,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Thiago Kpelo',
-    description: 'Fullstack developer - (Javascript | ReactJs | React Native | Nodejs)',
+    description:
+      'Fullstack developer - (Javascript | ReactJs | React Native | Nodejs)',
     siteUrl: 'https://thiagokpelo.dev',
     author: {
       name: 'Thiago Kpelo',
@@ -11,7 +12,8 @@ module.exports = {
       email: 'thiagokpelo@gmail.com'
     }
   },
-  plugins: [{
+  plugins: [
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Thiago Kpelo`,
@@ -19,7 +21,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#222237`,
         theme_color: `#222237`,
-        display: `minimal-ui`,
+        display: `minimal-ui`
         // icon: `src/content/media/favicons/favicon-32x32.png`,
         // icons: [{
         //     src: `src/content/media/favicons/favicon-192x192.png`,
@@ -50,7 +52,8 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [{
+        plugins: [
+          {
             resolve: 'gatsby-remark-responsive-iframe',
             options: {
               wrapperStyle: 'margin-bottom: 1rem'
@@ -83,6 +86,19 @@ module.exports = {
         google: {
           families: ['Patua+One:400', 'Roboto+Mono:400,700']
         }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        // language JSON resource path
+        path: `${__dirname}/src/locales`,
+        // supported language
+        languages: [`en`, `pt`],
+        // language file path
+        defaultLanguage: `en`,
+        // option to redirect to `/ko` when connecting `/`
+        redirect: false
       }
     },
     'gatsby-plugin-emotion',

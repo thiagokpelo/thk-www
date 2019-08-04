@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
+import { injectIntl } from 'gatsby-plugin-intl'
 
 import { MdArrowForward } from 'react-icons/md'
 import { TerminalContext, ITerminalPost } from '@thk/components/terminal'
@@ -59,7 +60,7 @@ const validateForm = (
   }
 }
 
-export const Form: React.FC<{}> = () => {
+const Form: React.FC<{}> = ({ intl }: any) => {
   const handleSubmit = (
     ev: React.FormEvent,
     createAlert: (posts: ITerminalPost[]) => void
@@ -74,8 +75,6 @@ export const Form: React.FC<{}> = () => {
       if (formValidate.length > 0) {
         createAlert(formValidate as any)
       } else {
-        console.dir(form.elements)
-        console.log(encode(form.elements))
         fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -103,17 +102,27 @@ export const Form: React.FC<{}> = () => {
             data-netlify-honeypot="bot-field"
           >
             <input type="hidden" name="form-name" value="contact-form" />
-            <TextField name="name" type="text" placeholder="Name" required />
-            <TextField name="email" type="email" placeholder="Email" required />
+            <TextField
+              name="name"
+              type="text"
+              placeholder={intl.formatMessage({ id: 'form.name' })}
+              required
+            />
+            <TextField
+              name="email"
+              type="email"
+              placeholder={intl.formatMessage({ id: 'form.email' })}
+              required
+            />
             <TextField
               name="message"
-              placeholder="Message..."
+              placeholder={intl.formatMessage({ id: 'form.message' })}
               as="textarea"
               rows={15}
               required
             />
             <Button onClick={ev => handleSubmit(ev, createAlert)}>
-              Send <MdArrowForward />
+              {intl.formatMessage({ id: 'form.send' })} <MdArrowForward />
             </Button>
           </FormComponent>
         </React.Fragment>
@@ -121,3 +130,5 @@ export const Form: React.FC<{}> = () => {
     </TerminalContext.Consumer>
   )
 }
+
+export default injectIntl(Form)
