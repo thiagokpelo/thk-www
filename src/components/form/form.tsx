@@ -32,7 +32,7 @@ const encode = (data: any) => {
   return Array.from(data)
     .filter(element => !Array.isArray(element))
     .map(
-      field =>
+      (field: any) =>
         `${encodeURIComponent(field.name)}=${encodeURIComponent(field.value)}`
     )
     .join('&')
@@ -40,7 +40,7 @@ const encode = (data: any) => {
 
 /* tslint:disable-next-line */
 const validateForm = (
-  elements: Array<HTMLInputElement | HTMLTextAreaElement> = []
+  elements: ArrayLike<HTMLInputElement | HTMLTextAreaElement> = []
 ) => {
   if (elements !== []) {
     return Array.from(elements)

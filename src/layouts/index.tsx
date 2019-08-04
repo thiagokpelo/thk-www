@@ -47,7 +47,7 @@ const IndexLayout: React.SFC = ({ children }) => (
             }
           ]}
         />
-        <Header title={data.site.siteMetadata.title} />
+        <Header />
         <LayoutMain>{children}</LayoutMain>
         <Footer />
         <Terminal />
