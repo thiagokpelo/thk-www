@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 
-import { dimensions, colors } from '@thk/styles/variables'
+import { colors } from '@thk/styles/variables'
 import { mediaQuerie } from '@thk/helpers'
 import Logo from '@thk/components/logo'
 
@@ -41,11 +41,7 @@ const HomepageLink = styled(Link)`
   }
 `
 
-interface HeaderProps {
-  title: string
-}
-
-const Header: React.SFC<HeaderProps> = ({ title }) => (
+const Header: React.SFC = () => (
   <StyledHeader role="banner">
     <HeaderNav />
     <HeaderInner>
