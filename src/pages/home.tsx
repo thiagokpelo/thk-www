@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { injectIntl } from 'gatsby-plugin-intl'
 
 import Page from '@thk/components/Page'
 import * as GridNavigation from '@thk/components/grid-navigation'
@@ -6,31 +7,31 @@ import IndexLayout from '@thk/layouts'
 
 import { colors } from '@thk/styles/variables'
 
-const Home = () => (
+const Home = ({ intl }: any) => (
   <IndexLayout>
     <Page title="index.ts">
       <GridNavigation.Container>
         <GridNavigation.ItemImage
           to="/me"
           src="https://res.cloudinary.com/dmmhdwajy/image/upload/v1564859120/profile_uoom4f.jpg"
-          alt="I'm coding just like a rapper"
+          alt={intl.formatMessage({ id: 'home.links.me.alt' })}
           align="flex-end"
         >
-          Who am I?
+          {intl.formatMessage({ id: 'home.links.me.text' })}
         </GridNavigation.ItemImage>
         <GridNavigation.ItemImage
           to="/projects"
           src="https://res.cloudinary.com/dmmhdwajy/image/upload/v1564859120/code-wine_wxhph4.jpg"
-          alt="Code with wine! Hummmmmm!"
+          alt={intl.formatMessage({ id: 'home.links.projects.alt' })}
         >
-          See some projects
+          {intl.formatMessage({ id: 'home.links.projects.text' })}
         </GridNavigation.ItemImage>
         <GridNavigation.ItemImage
           to="/contact"
           src="https://res.cloudinary.com/dmmhdwajy/image/upload/v1564859120/code-coffee_x3boga.jpg"
-          alt="Coffe and code are the perfect combination"
+          alt={intl.formatMessage({ id: 'home.links.contact.alt' })}
         >
-          Talk to me
+          {intl.formatMessage({ id: 'home.links.contact.text' })}
         </GridNavigation.ItemImage>
         <GridNavigation.ItemContent style={{ padding: '1rem 0 0 1rem' }}>
           <span
@@ -43,14 +44,15 @@ const Home = () => (
             {'<'}
           </span>
           <h1 style={{ paddingLeft: '3rem', color: colors.pink }}>
-            Hello, <br />
-            World!
+            {intl.formatMessage({ id: 'home.hello' })}
+            <br />
+            {intl.formatMessage({ id: 'home.world' })}
           </h1>
           <h3 style={{ paddingLeft: '3rem', fontWeight: 400 }}>
-            I'm Thiago Kpelo
+            {intl.formatMessage({ id: 'home.name' })}
           </h3>
           <h3 style={{ paddingLeft: '3rem', fontWeight: 400 }}>
-            Welcome to my portfolio site.
+            {intl.formatMessage({ id: 'home.welcome' })}
           </h3>
           <span
             style={{ color: '#fff', fontSize: '3.2rem', marginTop: '1.2rem' }}
@@ -63,4 +65,4 @@ const Home = () => (
   </IndexLayout>
 )
 
-export default Home
+export default injectIntl(Home)

@@ -43,7 +43,8 @@ const IndexLayout: React.SFC = ({ children }) => (
             },
             {
               name: 'keywords',
-              content: 'gatsbyjs, gatsby, javascript, sample, something'
+              content:
+                'frontend, developer, fullstack, javascript, react, react native, node'
             }
           ]}
         />

@@ -1,10 +1,7 @@
 // jshint ignore: start
-
 const path = require('path')
 
-exports.onCreateWebpackConfig = ({
-  actions
-}) => {
+exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
@@ -15,14 +12,8 @@ exports.onCreateWebpackConfig = ({
   })
 }
 
-exports.onCreateNode = ({
-  node,
-  actions,
-  getNode
-}) => {
-  const {
-    createNodeField
-  } = actions
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
 
   // Sometimes, optional fields tend to get not picked up by the GraphQL
   // interpreter if not a single content uses it. Therefore, we're putting them
@@ -31,13 +22,8 @@ exports.onCreateNode = ({
 
   switch (node.internal.type) {
     case 'MarkdownRemark': {
-      const {
-        permalink,
-        layout
-      } = node.frontmatter
-      const {
-        relativePath
-      } = getNode(node.parent)
+      const { permalink, layout } = node.frontmatter
+      const { relativePath } = getNode(node.parent)
 
       let slug = permalink
 
@@ -62,13 +48,8 @@ exports.onCreateNode = ({
   }
 }
 
-exports.createPages = async ({
-  graphql,
-  actions
-}) => {
-  const {
-    createPage
-  } = actions
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
 
   const allMarkdown = await graphql(`
     {
@@ -90,13 +71,8 @@ exports.createPages = async ({
     throw new Error(allMarkdown.errors)
   }
 
-  allMarkdown.data.allMarkdownRemark.edges.forEach(({
-    node
-  }) => {
-    const {
-      slug,
-      layout
-    } = node.fields
+  allMarkdown.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const { slug, layout } = node.fields
 
     createPage({
       path: slug,
