@@ -21,7 +21,7 @@
     },
     "me": {
         "who-am-i": {
-            "title": "",
+            "title": "O que faço",
             "description": "Fullstack developer - (Javascript | ReactJs | React Native | Nodejs)",
             "jobs": "<li>Desenvolvedor Front end Especialista da Beleza na Web</li><li>Groselha.io</li><li>Mentor do gStudio</li><li>Suporte na Claro Brasil</li><li>Bigland</li>"
         },
