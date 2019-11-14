@@ -22,7 +22,7 @@
         "pre-commit-custom": "pretty-quick --staged"
     },
     "engines": {
-        "node": "10"
+        "node": ">=8.0.0"
     },
     "husky": {
         "hooks": {
