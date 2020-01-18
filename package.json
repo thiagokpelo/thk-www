@@ -72,7 +72,7 @@
         "@types/classnames": "^2.2.7",
         "@types/node": "^11.13.8",
         "@types/react": "^16.8.15",
-        "@types/react-dom": "^16.8.4",
+        "@types/react-dom": "^16.9.4",
         "@types/react-helmet": "^5.0.8",
         "gh-pages": "^2.0.1",
         "husky": "^3.0.2",
