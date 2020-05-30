@@ -13,7 +13,7 @@ const Home = ({ intl }: any) => (
       <GridNavigation.Container>
         <GridNavigation.ItemImage
           to="/me"
-          src="https://res.cloudinary.com/dmmhdwajy/image/upload/v1564859120/profile_uoom4f.jpg"
+          src="https://res.cloudinary.com/thiagokpelo/image/upload/v1564859120/profile_uoom4f.jpg"
           alt={intl.formatMessage({ id: 'home.links.me.alt' })}
           align="flex-end"
         >
@@ -21,14 +21,14 @@ const Home = ({ intl }: any) => (
         </GridNavigation.ItemImage>
         <GridNavigation.ItemImage
           to="/projects"
-          src="https://res.cloudinary.com/dmmhdwajy/image/upload/v1564859120/code-wine_wxhph4.jpg"
+          src="https://res.cloudinary.com/thiagokpelo/image/upload/v1564859120/code-wine_wxhph4.jpg"
           alt={intl.formatMessage({ id: 'home.links.projects.alt' })}
         >
           {intl.formatMessage({ id: 'home.links.projects.text' })}
         </GridNavigation.ItemImage>
         <GridNavigation.ItemImage
           to="/contact"
-          src="https://res.cloudinary.com/dmmhdwajy/image/upload/v1564859120/code-coffee_x3boga.jpg"
+          src="https://res.cloudinary.com/thiagokpelo/image/upload/v1564859120/code-coffee_x3boga.jpg"
           alt={intl.formatMessage({ id: 'home.links.contact.alt' })}
         >
           {intl.formatMessage({ id: 'home.links.contact.text' })}

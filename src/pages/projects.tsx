@@ -16,6 +16,18 @@ const Projects = ({ intl }: any) => (
       <JobList>
         <JobListItem
           companyName={intl.formatMessage({
+            id: 'projects.what-i-already-do.jobs.loft.name'
+          })}
+          jobTitle={intl.formatMessage({
+            id: 'projects.what-i-already-do.jobs.loft.job-description'
+          })}
+        >
+          <ul>
+            <FormattedHTMLMessage id="projects.what-i-already-do.jobs.loft.list" />
+          </ul>
+        </JobListItem>
+        <JobListItem
+          companyName={intl.formatMessage({
             id: 'projects.what-i-already-do.jobs.blz.name'
           })}
           jobTitle={intl.formatMessage({

@@ -24,27 +24,27 @@ const Me = ({ intl }: any) => (
       <GridImage>
         <Image
           alt={intl.formatMessage({ id: 'me.images.my-workspace' })}
-          src="https://res.cloudinary.com/dmmhdwajy/image/upload/v1564859371/jiraiya_xiwjj4.gif"
+          src="https://res.cloudinary.com/thiagokpelo/image/upload/v1564859371/jiraiya_xiwjj4.gif"
         />
         <Image
           alt={intl.formatMessage({ id: 'me.images.home-office' })}
-          src="https://res.cloudinary.com/dmmhdwajy/image/upload/v1564859121/home-office_roqb9z.jpg"
+          src="https://res.cloudinary.com/thiagokpelo/image/upload/v1564859121/home-office_roqb9z.jpg"
         />
         <Image
           alt={intl.formatMessage({ id: 'me.images.mother' })}
-          src="https://res.cloudinary.com/dmmhdwajy/image/upload/v1564859121/mother_bxtnsm.jpg"
+          src="https://res.cloudinary.com/thiagokpelo/image/upload/v1564859121/mother_bxtnsm.jpg"
         />
         <Image
           alt={intl.formatMessage({ id: 'me.images.my-love' })}
-          src="https://res.cloudinary.com/dmmhdwajy/image/upload/v1564859120/love_gwwvyt.jpg"
+          src="https://res.cloudinary.com/thiagokpelo/image/upload/v1564859120/love_gwwvyt.jpg"
         />
         <Image
           alt={intl.formatMessage({ id: 'me.images.dad' })}
-          src="https://res.cloudinary.com/dmmhdwajy/image/upload/v1564859120/father_hglwfd.jpg"
+          src="https://res.cloudinary.com/thiagokpelo/image/upload/v1564859120/father_hglwfd.jpg"
         />
         <Image
           alt={intl.formatMessage({ id: 'me.images.palmeiras' })}
-          src="https://res.cloudinary.com/dmmhdwajy/image/upload/v1564859120/palmeiras_bspfch.jpg"
+          src="https://res.cloudinary.com/thiagokpelo/image/upload/v1564859120/palmeiras_bspfch.jpg"
         />
       </GridImage>
     </Page>
