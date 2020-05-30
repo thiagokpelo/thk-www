@@ -23,7 +23,7 @@
         "who-am-i": {
             "title": "O que faço",
             "description": "Fullstack developer - (Javascript | ReactJs | React Native | Nodejs)",
-            "jobs": "<li>Desenvolvedor Front end Especialista da Beleza na Web</li><li>Groselha.io</li><li>Mentor do gStudio</li><li>Suporte na Claro Brasil</li><li>Bigland</li>"
+            "jobs": "<li>Engenheiro de Software na Loft</li><li>Groselha.io</li><li>Mentor do gStudio</li>"
         },
         "about-me": {
             "title": "Um pouco sobre mim",
@@ -42,6 +42,11 @@
         "what-i-already-do": {
             "title": "What I already did",
             "jobs": {
+                "loft": {
+                    "name": "Loft",
+                    "job-description": "software engineer",
+                    "list": "<li>Carregando informações... 🧡</li>"
+                },
                 "blz": {
                     "name": "Beleza na Web",
                     "job-description": "fullstack developer",
