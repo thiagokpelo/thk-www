@@ -8,9 +8,11 @@ type Status = 'error' | null
 type TextFieldProps = {
   label?: string
   status?: Status
-} & React.HTMLProps<HTMLInputElement | HTMLTextAreaElement>
+  as?: string
+} & React.InputHTMLAttributes<any> &
+  React.TextareaHTMLAttributes<any>
 
-const StyledTextField = styled.input<any>`
+const StyledTextField = styled.input<Omit<TextFieldProps, 'label' | 'status'>>`
   position: relative;
   width: 100%;
   border-radius: 0;
