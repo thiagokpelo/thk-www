@@ -74,7 +74,7 @@
         "@types/react": "^16.8.15",
         "@types/react-dom": "^16.8.4",
         "@types/react-helmet": "^5.0.8",
-        "gh-pages": "^2.0.1",
+        "gh-pages": "^3.0.0",
         "husky": "^3.0.2",
         "prettier": "^1.17.0",
         "pretty-quick": "^1.11.1",
