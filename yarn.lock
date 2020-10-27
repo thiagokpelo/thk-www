@@ -2269,15 +2269,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/node@*":
-  version "14.0.6"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.6.tgz#f9e178b2da31a4b0ec60b64649e244c31ce18daf"
-  integrity sha512-FbNmu4F67d3oZMWBV6Y4MaPER+0EpE9eIYf2yaHhCWovc1dlXCZkqGX4NLHfVVr6umt20TNBdRzrNJIzIKfdbw==
-
-"@types/node@^11.13.8":
-  version "11.15.14"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.15.14.tgz#0b837e6d31cde5a2eb7c8f66f506d46f062f1838"
-  integrity sha512-5R/ADTMiAxv+4GAwzsupaUO51T1e0UYdPc8StO/t6a+Fv1o2sbY9MWgmP2QxtKGwge8HqTjq058L360ai5RDug==
+"@types/node@*", "@types/node@^14.14.5":
+  version "14.14.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.5.tgz#e92d3b8f76583efa26c1a63a21c9d3c1143daa29"
+  integrity sha512-H5Wn24s/ZOukBmDn03nnGTp18A60ny9AmCwnEcgJiTgSGsCO7k+NWP7zjCCbhlcnVCoI+co52dUAt9GMhOSULw==
 
 "@types/node@^8.5.7":
   version "8.10.61"
